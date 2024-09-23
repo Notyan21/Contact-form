@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .grid-form-md{
+        grid-template-areas: 
+        "name last-name"
+        "email email"
+        ;
+    }
+
+
+}

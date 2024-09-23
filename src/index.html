@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <title>Contact form</title>
+</head>
+
+<body class="grid items-center h-screen bg-green-200-lighter font-karla">
+
+  
+
+  <main class="">
+
+    <section class="p-4 space-y-5 text-white bg-grey-900-darker rounded-xl md:space-y-2 w-[80%] mx-auto md:w-[40%] hidden message-sent">
+
+      <p class="flex gap-4">
+        <span>
+          <img src="images/icon-success-check.svg" alt="">
+        </span>
+        Message Sent!
+      </p>
+
+      <p class="text-sm text-grey-500-medium">Thanks for completing the form. We´ll be in touch soon</p>
+
+  </section>
+
+
+    <div class="w-[90%] bg-white px-5 py-5 max-w-sm md:max-w-xl mx-auto">
+
+      <h2 class="pb-3 text-3xl font-medium text-grey-900-darker">Contact Us</h2>
+
+      <form class="space-y-2 md:space-y-4" id="form">
+
+        <section class="space-y-2 md:space-y-0 md:grid md:grid-form-md md:gap-4 ">
+
+          <div class="md:[grid-area:name]">
+            <p class="text-grey-900-darker">First Name
+              <span class="text-green-600-medium">*</span>
+            </p>
+
+            <input type="text" name="name" id="name"
+              class="border w-full py-1.5 hover:cursor-pointer border-grey-500-medium hover:border-green-600-medium  rounded-md ">
+          </div>
+
+          <div class="md:[grid-area:last-name]">
+            <p class="text-grey-900-darker">Last Name
+              <span class="text-green-600-medium">*</span>
+            </p>
+            <input type="text" name="lastName" id="last-name"
+              class="border w-full py-1.5 hover:cursor-pointer rounded-md  border-grey-500-medium hover:border-green-600-medium">
+          </div>
+
+
+          <div class="[grid-area:email]">
+            <p class="text-grey-900-darker">Email Address
+              <span class="text-green-600-medium">*</span>
+            </p>
+
+            <input type="email" name="email" id="email"
+              class="border w-full py-1.5 hover:cursor-pointer rounded-md  border-grey-500-medium hover:border-green-600-medium">
+          </div>
+
+
+        </section>
+
+        <section class="mt-4">
+          <p class="text-grey-900-darker select-query-type">Query Type
+            <span class="text-green-600-medium">*</span>
+          </p>
+
+          <div class="flex flex-col w-full mt-2 mb-1 md:flex-row">
+
+            <label
+              class="flex md:w-1/2 h-[40px] md:text-base text-sm my-2 md:mr-4 items-center px-6 cursor-pointer rounded-lg outline outline-1 outline-grey-500-medium hover:outline-green-600-medium has-[:checked]:outline-green-text-green-600-medium has-[:checked]:bg-green-200-lighter">
+              <input type="radio" id="general-enquiry" name="query-type" value="general"
+                class="w-5 h-5 accent-green-text-green-600-medium outline-grey-600" />
+              <span class="ml-2 text-grey-900-darker">General Enquiry</span>
+            </label>
+
+            <label
+              class="flex md:w-1/2 h-[40px] md:text-base text-sm my-2 md:ml-4 items-center px-6 cursor-pointer rounded-lg outline outline-1 outline-grey-500-medium hover:outline-green-600-medium has-[:checked]:outline-green-text-green-600-medium has-[:checked]:bg-green-200-lighter">
+              <input type="radio" id="support-request" name="query-type" value="support"
+                class="w-5 h-5 accent-green-text-green-600-medium" />
+              <span class="ml-2 text-grey-900-darker">Support Request</span>
+            </label>
+
+          </div>
+          <span id="error-query" class="hidden text-sm text-Red">Please select a query type</span>
+        </section>
+
+        <section class="py-4 md:space-y-2">
+          <p class="text-grey-900-darker">Message
+            <span class="text-green-600-medium">*</span>
+          </p>
+          <textarea name="message" id="message"
+            class="border w-full py-1.5 rounded-md border-grey-500-medium hover:border-green-600-medium h-40 md:h-28 resize-none"></textarea>
+
+        </section>
+
+        <section>
+
+          <div class="flex">
+            <input type="checkbox" name="consent" id="consent-input"
+              class="inline-block hover:cursor-pointer border-grey-500-medium hover:border-green-600-medium">
+
+            <label for="consent-input" class="text-grey-900-darker w-[90%] ml-2 hover:cursor-pointer">
+              I consent to being contacted by the team
+              <span class="text-green-600-medium">*</span>
+            </label>
+          </div>
+
+        </section>
+
+        <button type="submit" class="w-full py-3 text-white rounded-md bg-green-600-medium submit-button">Submit</button>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <script src="main.js"></script>
+
+
+</body>
+
+</html>
